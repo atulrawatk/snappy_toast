@@ -45,7 +45,7 @@ class _SmartSnackDemoState extends State<SmartSnackDemo> {
                       dismissType: DismissType.onTap,
                     );
                   },
-                  child: Text("AA DBA DE!"))
+                  child: Text("Press Me!"))
             ],
           )),
     );
