@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-
-import '../snappy_toast.dart';
+part of '../snappy_toast.dart';
 
 class SmartSnackToastWrapper extends StatelessWidget {
   final Widget child;

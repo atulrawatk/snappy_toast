@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-
-import 'enums/enums.dart';
+part of '../snappy_toast.dart';
 
 extension ToastTypeColor on ToastType {
   Color get color {

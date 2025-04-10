@@ -1,3 +1,4 @@
+part of '../snappy_toast.dart';
 enum ToastPosition { top, center, bottom }
 
 // Visual style: minimal (text+icon) or detailed (with close button)

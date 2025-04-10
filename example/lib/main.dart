@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:snappy_toast/enums/enums.dart';
 import 'package:snappy_toast/snappy_toast.dart';
-import 'package:snappy_toast/widgets/smart_snack_toast_wrapper.dart';
 
 void main() => runApp(const MyApp());
 

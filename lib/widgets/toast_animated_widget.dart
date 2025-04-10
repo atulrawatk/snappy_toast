@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of '../snappy_toast.dart';
 
 class ToastAnimatedWidget extends StatefulWidget {
   final Widget child;

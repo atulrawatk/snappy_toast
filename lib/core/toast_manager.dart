@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:snappy_toast/extensions.dart';
-
-import '../enums/enums.dart';
-import '../widgets/toast_animated_widget.dart';
+part of '../snappy_toast.dart';
 
 class ToastManager {
   final String message;
