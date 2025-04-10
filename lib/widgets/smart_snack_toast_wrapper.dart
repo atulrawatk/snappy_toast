@@ -5,7 +5,7 @@ import '../snappy_toast.dart';
 class SmartSnackToastWrapper extends StatelessWidget {
   final Widget child;
 
-  const SmartSnackToastWrapper({Key? key, required this.child}) : super(key: key);
+  const SmartSnackToastWrapper({super.key, required this.child});
 
   @override
   Widget build(BuildContext context) {
