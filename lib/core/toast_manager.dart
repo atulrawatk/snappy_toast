@@ -59,39 +59,37 @@ class ToastManager {
       ),
       child: style == ToastStyle.minimal
           ? Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(customIcon ?? type.icon, color: Colors.white, size: 20),
-          const SizedBox(width: 8),
-          Flexible(
-            child: Text(message,
-                style:
-                const TextStyle(color: Colors.white, fontSize: 14),
-                textAlign: TextAlign.center),
-          ),
-        ],
-      )
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(customIcon ?? type.icon, color: Colors.white, size: 20),
+                const SizedBox(width: 8),
+                Flexible(
+                  child: Text(message,
+                      style: const TextStyle(color: Colors.white, fontSize: 14),
+                      textAlign: TextAlign.center),
+                ),
+              ],
+            )
           : Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(customIcon ?? type.icon, color: Colors.white, size: 20),
-          const SizedBox(width: 8),
-          Expanded(
-            child: Text(message,
-                style:
-                const TextStyle(color: Colors.white, fontSize: 14),
-                textAlign: TextAlign.center),
-          ),
-          if (dismissType == DismissType.swipe) ...[
-            const SizedBox(width: 8),
-            GestureDetector(
-              onTap: onDismiss,
-              child: const Icon(Icons.close,
-                  color: Colors.white, size: 18),
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(customIcon ?? type.icon, color: Colors.white, size: 20),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Text(message,
+                      style: const TextStyle(color: Colors.white, fontSize: 14),
+                      textAlign: TextAlign.center),
+                ),
+                if (dismissType == DismissType.swipe) ...[
+                  const SizedBox(width: 8),
+                  GestureDetector(
+                    onTap: onDismiss,
+                    child:
+                        const Icon(Icons.close, color: Colors.white, size: 18),
+                  ),
+                ],
+              ],
             ),
-          ],
-        ],
-      ),
     );
 
     // Return positioned toast in overlay
@@ -110,13 +108,13 @@ class ToastManager {
             child: builder != null
                 ? builder!(message, type)
                 : dismissType == DismissType.onTap
-                ? GestureDetector(onTap: onDismiss, child: toastContent)
-                : Dismissible(
-              key: UniqueKey(),
-              direction: DismissDirection.up,
-              onDismissed: (_) => onDismiss(),
-              child: toastContent,
-            ),
+                    ? GestureDetector(onTap: onDismiss, child: toastContent)
+                    : Dismissible(
+                        key: UniqueKey(),
+                        direction: DismissDirection.up,
+                        onDismissed: (_) => onDismiss(),
+                        child: toastContent,
+                      ),
           ),
         ),
       ),

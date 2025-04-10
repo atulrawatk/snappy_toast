@@ -33,7 +33,6 @@ class _SmartSnackDemoState extends State<SmartSnackDemo> {
           padding: const EdgeInsets.all(16.0),
           child: ListView(
             children: [
-
               /// smart_snack_toast
               ElevatedButton(
                   onPressed: () {
