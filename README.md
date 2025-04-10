@@ -6,7 +6,7 @@ A lightweight, snappy toast and snackbar manager for Flutter.
 ---
 ## 💡 Why Snappy Toast?
 Avoid boilerplate code.
-Works outside widget tree or GetX/Navigator stacks.
+Works outside widget tree or Navigator stacks.
 Clean overlay-based toast & snackbar manager.
 
 ## 🚀 Features
