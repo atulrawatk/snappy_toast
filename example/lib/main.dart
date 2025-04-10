@@ -12,19 +12,19 @@ class MyApp extends StatelessWidget {
       title: 'Smart Toast Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: SmartSnackToastWrapper(child: const SmartFormDemo()),
+      home: SmartSnackToastWrapper(child: const SmartSnackDemo()),
     );
   }
 }
 
-class SmartFormDemo extends StatefulWidget {
-  const SmartFormDemo({super.key});
+class SmartSnackDemo extends StatefulWidget {
+  const SmartSnackDemo({super.key});
 
   @override
-  State<SmartFormDemo> createState() => _SmartFormDemoState();
+  State<SmartSnackDemo> createState() => _SmartSnackDemoState();
 }
 
-class _SmartFormDemoState extends State<SmartFormDemo> {
+class _SmartSnackDemoState extends State<SmartSnackDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
