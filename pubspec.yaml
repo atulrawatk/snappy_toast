@@ -1,10 +1,13 @@
 name: snappy_toast
-description: "A new Flutter package project."
-version: 0.0.1
-homepage:
+description: "A lightweight, snappy toast and snackbar manager for Flutter.  
+✨ Show beautiful toast messages or stylish snackbars — without needing `BuildContext`, `Navigator`, or `Stack` setup."
+version: 1.0.0
+homepage: "https://github.com/atulrawatk/snappy_toast"
+repository: "https://github.com/atulrawatk/snappy_toast"
+issue_tracker: "https://github.com/atulrawatk/snappy_toast/issues"
 
 environment:
-  sdk: ^3.6.0
+  sdk: ">=2.12.0 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:

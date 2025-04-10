@@ -1,39 +1,76 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Snappy Toast
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+A lightweight, snappy toast and snackbar manager for Flutter.  
+✨ Show beautiful toast messages or stylish snackbars — without needing `BuildContext`, `Navigator`, or `Stack` setup.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+---
+## 💡 Why Snappy Toast?
+Avoid boilerplate code.
+Works outside widget tree or GetX/Navigator stacks.
+Clean overlay-based toast & snackbar manager.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## 🚀 Features
 
-## Features
+- ✅ Show toast anywhere — without context!
+- 🪄 Snackbar support too — separate from toast
+- 🔔 Queue system with prioritization
+- 🎨 Multiple toast styles (minimal or detailed)
+- 📱 Configurable position (top, center, bottom)
+- 🧩 Custom icons, durations, and dismiss types
+- 💥 Optional haptic feedback
+- 🚫 Auto-dismiss and swipe-to-dismiss support
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+---
 
-## Getting started
+## 🛠 Installation
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Add the dependency to your `pubspec.yaml`:
 
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+```yaml
+dependencies:
+  snappy_toast:
+    path: ../snappy_toast # local testing, update when published
+```
+## 🧪 Example Usage
+### 1️⃣ Initialize
+Wrap your app with SnappyToastInitializer:
 
 ```dart
-const like = 'sample';
+    void main() {
+      runApp(SnappyToastInitializer(child: MyApp()));
+      }
 ```
+✅ You don't need a navigatorKey or extra Stack.
 
-## Additional information
+### 2️⃣ Show a Toast
+```dart
+    SnappyToast.show(
+      message: "Hello from toast!",
+      type: ToastType.success,
+      position: ToastPosition.bottom,
+      );
+```
+### 3️⃣ Show a Snackbar
+```dart
+    SnappyToast.showSnackBar(
+        message: "This is a snackbar",
+        type: ToastType.warning,
+        duration: Duration(seconds: 3),
+        );
+```
+## 🎛 Configurations
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+| Parameter     | Description                            | Default     |
+|---------------|----------------------------------------|-------------|
+| `type`        | success, error, warning, info          | `info`      |
+| `position`    | top, center, bottom (toast only)       | `bottom`    |
+| `style`       | minimal, detailed                      | `detailed`  |
+| `dismissType` | swipe or onTap                         | `swipe`     |
+| `duration`    | Show time                              | 2 seconds   |
+| `customIcon`  | Override the icon                      | `null`      |
+| `priority`    | Priority in the toast queue            | `0`         |
+| `haptic`      | Enable haptic feedback                 | `false`     |
+| `dismissAll`  | Remove all previous toasts/snackbars   | `false`     |
+
+## ✨ Author
+Made with ❤️ by Samuel & Atul
