@@ -28,17 +28,28 @@ Add the dependency to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  snappy_toast:
-    path: ../snappy_toast # local testing, update when published
+  snappy_toast: latest_version
 ```
 ## 🧪 Example Usage
 ### 1️⃣ Initialize
-Wrap your app with SnappyToastInitializer:
+Wrap anywhere in your app with SmartSnackToastWrapper:
 
 ```dart
     void main() {
-      runApp(SnappyToastInitializer(child: MyApp()));
+      runApp(const MyApp());
       }
+    class MyApp extends StatelessWidget {
+      const MyApp({super.key});
+    
+      @override
+      Widget build(BuildContext context) {
+        return MaterialApp(
+          title: 'Smart FormX Demo',
+          theme: ThemeData(primarySwatch: Colors.blue),
+          home: SmartSnackToastWrapper(child: const SmartFormDemo()),
+        );
+      }
+    }
 ```
 ✅ You don't need a navigatorKey or extra Stack.
 
@@ -52,7 +63,7 @@ Wrap your app with SnappyToastInitializer:
 ```
 ### 3️⃣ Show a Snackbar
 ```dart
-    SnappyToast.showSnackBar(
+    SnappyToast.show(
         message: "This is a snackbar",
         type: ToastType.warning,
         duration: Duration(seconds: 3),

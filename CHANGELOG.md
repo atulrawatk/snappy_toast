@@ -14,3 +14,7 @@
 - ✅ Smart snack bar manager without needing `ScaffoldMessenger`
 - ✅ Built-in overlay system — no need for `Stack` or `NavigatorKey`
 - ✅ One-liner usage
+
+## [1.0.1] - 2025-04-10
+
+### Changes in ReadMe & Bug Fixes
